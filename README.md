@@ -1,5 +1,5 @@
 # VyOS-Get-Root
-Getting root on VyOS from an operator CLI
+Privilege escalation to root on VyOS from an operator CLI
 
 If you have operator-level console access on VyOS (or possibly another OS derived from Vyatta - Brocade vRouter or Ubiquiti EdgeOS) then you can use this technique to gain console access as root.  This has been tested on VyOS version 1.1.8.
 

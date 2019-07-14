@@ -1,7 +1,7 @@
 # VyOS-Get-Root
 Privilege escalation to root on VyOS from an operator CLI
 
-If you have operator-level console access on VyOS (or possibly another OS derived from Vyatta - Brocade vRouter or Ubiquiti EdgeOS) then you can use this technique to gain console access as root.  This has been tested on VyOS version 1.1.8.
+VyOS is an open source network operating system.  If you have operator-level console access on VyOS (or possibly another OS derived from Vyatta - Brocade vRouter or Ubiquiti EdgeOS) then you can use this technique to gain console access as root.  This has been tested on VyOS version 1.1.8.
 
 The operator mode is already known to be insecure in other ways, so the account is normally not available.  However some administrators have manually added operator accounts.  Here is an example of how an operator account could be created.
 

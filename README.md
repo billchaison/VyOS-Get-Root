@@ -5,11 +5,13 @@ If you have operator-level console access on VyOS (or possibly another OS derive
 
 The operator mode is already known to be insecure in other ways, so the account is normally not available.  However some administrators have manually added operator accounts.  Here is an example of how an operator account could be created.
 
-`configure`
-`set system login user operator level operator`
-`set system login user operator authentication plaintext-password Operator123`
-`commit`
-`save`
+```
+configure
+set system login user operator level operator
+set system login user operator authentication plaintext-password Operator123
+commit
+save
+```
 
 Once logged in as `operator` with the password of `Operator123` in this example, you will be dropped into a restricted shell `/opt/vyatta/bin/restricted-shell` that normally does not have configuration write capabilities or access to the bash shell and commands.
 
